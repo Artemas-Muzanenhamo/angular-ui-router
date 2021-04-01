@@ -9,11 +9,18 @@ angular.module('myApp', [
 ]).config(['$locationProvider', '$stateProvider', function ($locationProvider, $stateProvider) {
     $locationProvider.hashPrefix('');
 
-    let helloState = {
-        name: 'hello',
-        url: '/hello',
-        template: '<h2>Hello World</h2>'
+    let view1State = {
+        name: 'view1',
+        url: '/view1',
+        template: '<h2>Hello World From View 1</h2>'
     };
 
-    $stateProvider.state(helloState);
+    let view2State = {
+        name: 'view2',
+        url: '/view2',
+        template: '<h2>Greetings Earthling, this is View 2 </h2>'
+    };
+
+    $stateProvider.state(view1State);
+    $stateProvider.state(view2State);
 }]);
