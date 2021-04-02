@@ -4,21 +4,6 @@ angular.module('myApp', [
     'myApp.view1',
     'myApp.view2',
     'myApp.version'
-]).config(['$locationProvider', '$stateProvider', function ($locationProvider, $stateProvider) {
+]).config(['$locationProvider', function ($locationProvider) {
     $locationProvider.hashPrefix('');
-    //
-    // let view1State = {
-    //     name: 'view1',
-    //     url: '/view1',
-    //     template: '<h2>Hello World From View 1</h2>'
-    // };
-
-    let view2State = {
-        name: 'view2',
-        url: '/view2',
-        template: '<h2>Greetings Earthling, this is View 2 </h2>'
-    };
-
-    // $stateProvider.state(view1State);
-    $stateProvider.state(view2State);
 }]);
