@@ -1,1 +1,3 @@
-angular.module('myApp.view1', []);
+angular.module('myApp.view1', [
+    'myApp.subView'
+]);
